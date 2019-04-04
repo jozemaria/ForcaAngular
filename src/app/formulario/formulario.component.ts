@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class FormularioComponent implements OnInit {
   titulo = 'Jogo da Forca';
 
-  frase: string;
+  frase: string[];
 
-  constructor() {this.frase =  'teste';
+  constructor() {
+    this.frase =  [];
   }
 
   ngOnInit() {
+    this.frase = 'Casa'.split('');
   }
 
 
