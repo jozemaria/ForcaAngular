@@ -1,11 +1,21 @@
 <h1>{{ titulo }}</h1>
 
-<form>
+<!--<form>
   Digite uma Letra: <input type="text">
   <input type="submit" value="Enviar">
 </form>
 
 <div *ngFor="let teste of frase"><h1> {{teste}} </h1></div>
+-->
 
 
 
+<form (ngSubmit)="palpitar()">
+  Digite uma Letra:
+  <input type="text" name="letra" [(ngModel)]="letra">
+  <button type="submit"> OK </button>
+</form>
+<div>
+  <h1 class="traco" *ngFor= "let a of letrasAcertadas">{{a}}</h1><br>
+  {{mensagem}}
+</div>
